@@ -1,0 +1,43 @@
+<!doctype html>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Recipedia - Home</title>
+
+<script src="script.js" defer></script>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<template id="RECIPE_TEMPLATE">
+	<div class="Recipe">
+		<div class="Recipe_Buttons">
+			<button class="Recipe_Button fa-solid fa-download" title="Download This Recipe In PDF"></button>
+			<button class="Recipe_Button fa-solid fa-star" title="Favorite This Recipe (requires account)"></button>
+			<button class="Recipe_Button fa-solid fa-glasses" title="Read This Recipe"></button>
+			<button class="Recipe_Button fa-solid fa-paper-plane" title="Share This Recipe"></button>
+		</div>
+		<img class="Recipe_Image" alt="">
+		<div class="Recipe_Body">
+			<h3 class="Recipe_Name"></h3>
+			<p class="Recipe_Author"></p>
+			<ul class="Recipe_Categories"></ul>
+		</div>
+	</div>
+</template>
+
+<main>
+	<div class="Reading_Container">
+		<section>
+			<h2>Recommended For You</h2>
+			<p>Learn a collection of recipes curated by our chefs.</p>
+			<div id="RECIPES_CONTAINER" class="Recipes_Container"></div>
+		</section>
+	</div>
+</main>
+
+<footer class="Page_Footer">
+	<div class="Reading_Container Page_Footer_Container">
+		<p>Copyright (c) Sherman Rofeman. MIT license.</p>
+		<p>For a full copyright notice, check out its <a href="https://github.com/skippyr/recipedia" target="__blank">source code</a>.</p>
+	</div>
+</footer>
