@@ -9,6 +9,7 @@
 	--font_family_serif: "Lora", serif;
 
 	--border_radius: 5px;
+	--border_dark_red: 1px solid var(--color_dark_red);
 }
 
 *
@@ -43,22 +44,7 @@ img
 	height: 100%;
 }
 
-.Reading_Container
-{
-	margin-inline: auto;
-	width: min(90%, 900px);
-}
-
-.Recipes_Container
-{
-	display: grid;
-	grid-template-columns: repeat(auto-fit, 400px);
-	gap: 2rem;
-	margin: 1rem 0;
-	justify-content: center;
-}
-
-.Recipe_Button
+button
 {
 	padding: 0.8rem;
 	font-size: 1.2rem;
@@ -69,9 +55,64 @@ img
 	border-radius: var(--border_radius);
 }
 
-.Recipe_Button:hover
+button:hover
 {
 	outline: 2px solid var(--color_dark_red);
+}
+
+.Reading_Container
+{
+	margin-inline: auto;
+	width: min(90%, 900px);
+}
+
+.Page_Header
+{
+	position: sticky;
+	top: 0;
+	background-color: white;
+	border-bottom: var(--border_dark_red);
+	padding: 0.5rem 0;
+	margin-bottom: 3rem;
+}
+
+.Page_Header_Container
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Page_Header_Logo
+{
+	color: var(--color_dark_red);
+	font-family: var(--font_family_serif);
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.Account
+{
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.Account_Image
+{
+	--size: 40px;
+	border-radius: var(--border_radius);
+	width: var(--size);
+	height: var(--size);
+}
+
+.Recipes_Container
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 400px);
+	gap: 2rem;
+	margin: 1rem 0;
+	justify-content: center;
 }
 
 .Recipe_Image
@@ -105,5 +146,5 @@ img
 .Page_Footer_Container
 {
 	padding: 1rem 0;
-	border-top: 1px solid var(--color_dark_red);
+	border-top: var(--border_dark_red);
 }
