@@ -109,7 +109,7 @@ button:hover
 .Recipes_Container
 {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, 400px);
+	grid-template-columns: repeat(auto-fit, min(90%, 400px));
 	gap: 2rem;
 	margin: 1rem 0;
 	justify-content: center;
@@ -125,9 +125,9 @@ button:hover
 .Recipe_Categories
 {
 	list-style-type: none;
-	display: flex;
-	gap: 1rem;
 	margin-top: 1rem;
+	display: flex;
+	gap: 0.5rem;
 }
 
 .Recipe_Category
@@ -147,4 +147,12 @@ button:hover
 {
 	padding: 1rem 0;
 	border-top: var(--border_dark_red);
+}
+
+@media(max-width: 450px)
+{
+	.Account_Body
+	{
+		display: none;
+	}
 }
