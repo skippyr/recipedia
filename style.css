@@ -63,7 +63,7 @@ button:hover
 .Reading_Container
 {
 	margin-inline: auto;
-	width: min(90%, 900px);
+	width: min(90%, 950px);
 }
 
 .Page_Header
@@ -72,15 +72,10 @@ button:hover
 	top: 0;
 	background-color: white;
 	border-bottom: var(--border_dark_red);
-	padding: 0.5rem 0;
+	padding: 1rem 0;
 	margin-bottom: 3rem;
-}
-
-.Page_Header_Container
-{
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	justify-content: center;
 }
 
 .Page_Header_Logo
@@ -89,21 +84,6 @@ button:hover
 	font-family: var(--font_family_serif);
 	font-size: 1.2rem;
 	font-weight: bold;
-}
-
-.Account
-{
-	display: flex;
-	gap: 1rem;
-	align-items: center;
-}
-
-.Account_Image
-{
-	--size: 40px;
-	border-radius: var(--border_radius);
-	width: var(--size);
-	height: var(--size);
 }
 
 .Recipes_Container
@@ -141,6 +121,7 @@ button:hover
 .Page_Footer
 {
 	margin-top: 3rem;
+	margin-bottom: 5rem;
 }
 
 .Page_Footer_Container
@@ -149,7 +130,53 @@ button:hover
 	border-top: var(--border_dark_red);
 }
 
-@media(max-width: 450px)
+.Bottom_Bar
+{
+	background-color: var(--color_dark_red);
+	color: white;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 0.5rem;
+}
+
+.Bottom_Bar_Container
+{
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+	position: relative;
+}
+
+.Bottom_Bar_Button
+{
+	color: white;
+	border: 2px solid var(--color_dark_red);
+}
+
+.Bottom_Bar_Button:hover
+{
+	outline: 2px solid white;
+}
+
+.Account
+{
+	position: absolute;
+	left: 0;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.Account_Image
+{
+	--size: 40px;
+	border-radius: var(--border_radius);
+	width: var(--size);
+	height: var(--size);
+}
+
+@media(max-width: 900px)
 {
 	.Account_Body
 	{
