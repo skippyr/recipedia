@@ -2,19 +2,8 @@
 ## About
 The demo of the home of a recipes website showcasing some recipes.
 
-## Installation
--	Clone this repository.
-```bash
-git clone --depth=1 https://github.com/skippyr/recipedia
-```
-
--	Access the repository's directory.
-```bash
-cd recipedia
-```
-
 ## Usage
--	Open the `index.html` file using a web browser.
+-	Visit it using [GitHub Pages](https://skippyr.github.io/recipedia).
 
 ## Copyright
 Images are from Unsplash and are licensed under the [Unplash license](https://unsplash.com/license).
