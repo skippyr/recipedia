@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-:root
-{
+:root {
 	--color_light_red: #f1d6d6;
 	--color_dark_red: #420a0a;
 
@@ -10,42 +9,38 @@
 
 	--border_radius: 5px;
 	--border_dark_red: 1px solid var(--color_dark_red);
+
+	font-size: clamp(14px, 2vw, 16px);
 }
 
-*
-{
+* {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
-*::selection
-{
+*::selection {
 	background-color: var(--color_light_red);
 	color: var(--color_dark_red);
 }
 
-body, button
-{
+body, button {
 	font-family: var(--font_family_sans_serif);
 }
 
-h1, h2, h3, h4, h5, h6
-{
+h1, h2, h3, h4, h5, h6 {
 	font-family: var(--font_family_serif);
 	color: var(--color_dark_red);
 	margin: 0.5rem 0;
 }
 
-img
-{
+img {
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
 }
 
-button
-{
+button {
 	padding: 0.8rem;
 	font-size: 1.2rem;
 	border: 2px solid white;
@@ -55,19 +50,16 @@ button
 	border-radius: var(--border_radius);
 }
 
-button:hover
-{
+button:hover {
 	outline: 2px solid var(--color_dark_red);
 }
 
-.Reading_Container
-{
+.Reading_Container {
 	margin-inline: auto;
 	width: min(90%, 950px);
 }
 
-.Page_Header
-{
+.Page_Header {
 	position: sticky;
 	top: 0;
 	background-color: white;
@@ -78,16 +70,14 @@ button:hover
 	justify-content: center;
 }
 
-.Page_Header_Logo
-{
+.Page_Header_Logo {
 	color: var(--color_dark_red);
 	font-family: var(--font_family_serif);
 	font-size: 1.2rem;
 	font-weight: bold;
 }
 
-.Recipes_Container
-{
+.Recipes_Container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, min(90%, 400px));
 	gap: 2rem;
@@ -95,43 +85,37 @@ button:hover
 	justify-content: center;
 }
 
-.Recipe_Image
-{
+.Recipe_Image {
 	height: 150px;
 	margin: 1rem 0;
 	border-radius: var(--border_radius);
 }
 
-.Recipe_Categories
-{
+.Recipe_Categories {
 	list-style-type: none;
 	margin-top: 1rem;
 	display: flex;
 	gap: 0.5rem;
 }
 
-.Recipe_Category
-{
+.Recipe_Category {
 	background-color: var(--color_light_red);
 	color: var(--color_dark_red);
 	border-radius: var(--border_radius);
 	padding: 0.3rem 0.6rem;
 }
 
-.Page_Footer
-{
+.Page_Footer {
 	margin-top: 3rem;
 	margin-bottom: 5rem;
 }
 
-.Page_Footer_Container
-{
+.Page_Footer_Container {
 	padding: 1rem 0;
 	border-top: var(--border_dark_red);
 }
 
-.Bottom_Bar
-{
+.Tool_Bar {
 	background-color: var(--color_dark_red);
 	color: white;
 	position: fixed;
@@ -140,27 +124,23 @@ button:hover
 	padding: 0.5rem;
 }
 
-.Bottom_Bar_Container
-{
+.Tool_Bar_Container {
 	display: flex;
 	justify-content: center;
 	gap: 0.5rem;
 	position: relative;
 }
 
-.Bottom_Bar_Button
-{
+.Tool_Bar_Button {
 	color: white;
 	border: 2px solid var(--color_dark_red);
 }
 
-.Bottom_Bar_Button:hover
-{
+.Tool_Bar_Button:hover {
 	outline: 2px solid white;
 }
 
-.Account
-{
+.Account {
 	position: absolute;
 	left: 0;
 	display: flex;
@@ -168,8 +148,7 @@ button:hover
 	align-items: center;
 }
 
-.Account_Image
-{
+.Account_Image {
 	--size: 40px;
 	border-radius: var(--border_radius);
 	width: var(--size);
@@ -178,8 +157,26 @@ button:hover
 
 @media(max-width: 900px)
 {
-	.Account_Body
-	{
+	.Account_Body {
 		display: none;
+	}
+}
+
+@media(max-height: 400px)
+{
+	.Account {
+		bottom: 0;
+	}
+
+	.Tool_Bar {
+		right: 0;
+		top: 0;
+		width: fit-content;
+	}
+
+	.Tool_Bar_Container {
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
 	}
 }
